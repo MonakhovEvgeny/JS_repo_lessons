@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_6</title>
+    <script>
+        var arg1 = +prompt('Введите первое число')
+        var arg2 = +prompt('Введите второе число')
+        var operation = prompt('Для операции сложения введите "+", для операции вычитания' +
+            ' введите "-", для операции деления введите "/", для операции умножения ' +
+            'введите "*"')
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '+':
+                    return arg1 + arg2;
+                    break;
+                case '-':
+                    return arg1 - arg2;
+                    break;
+                case '/':
+                    return arg1 / arg2;
+                    break;
+                case '*':
+                    return arg1 * arg2;
+                    break;
+            }
+        }
+
+        alert(`результат операции = ${mathOperation(arg1, arg2, operation)}`)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
