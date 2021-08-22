@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        "use strict";
+
+        function numberObject(arg) {
+            if (arg > 999) {
+                arg = +prompt('Введите число в пределах от 0 до 999');
+                return numberObject(arg)
+            } else {
+                let hundreds = (arg - arg % 100) / 100;
+                let tens = (arg % 100 - (arg % 100) % 10) / 10;
+                let units = (arg % 100) % 10;
+                return {
+                    units: units,
+                    tens: tens,
+                    hundreds: hundreds,
+                    sayNumber() {
+                        alert('Your number - ' + arg + '\n\n' + 'hundreds - ' + this.hundreds +
+                            '   tens - ' + this.tens + '   units - ' + this.units);
+
+                    }
+                }
+            }
+        }
+
+        let arg = +prompt('Введите число от 0 до 999')
+        let res = numberObject(arg)
+        res.sayNumber()
+        alert(sayNumber())
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
